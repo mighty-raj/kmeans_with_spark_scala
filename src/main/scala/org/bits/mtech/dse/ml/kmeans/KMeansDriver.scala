@@ -4,7 +4,7 @@ import org.apache.log4j.Level
 import org.apache.spark.{SparkConf, SparkContext}
 import org.bits.mtech.dse.ml.kmeans.KMeansModel._
 
-object KMeans {
+object KMeansDriver {
 
   def main(args: Array[String]) = {
     val inpPath = args(0)
