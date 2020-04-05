@@ -1,7 +1,6 @@
 package org.bits.mtech.dse.ml.kmeans
 
 import org.apache.log4j.Level
-import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 import org.bits.mtech.dse.ml.kmeans.KMeansModel._
 
@@ -31,24 +30,6 @@ object KMeans {
 
 //    K Center point initialized
     kPoints.foreach(println)
-
-//    loop until the total distance between one iteration's points and the next is less than the convergence distance specified
-//    var tempDist = Double.PositiveInfinity
-    /*while(tempDist > convergeDist) {
-      val closestToKPoints = customersInp.map(point => (closestPoint(point, kPoints), (point,1))) //Find nearest cluster
-      val pointCalculated = closestToKPoints.reduceByKey{ case ((cust1, n1), (cust2, n2)) => (addPoints(cust1, cust2), n1 + n2)}
-      val newPoints = pointCalculated.map {
-        case (i, (cust, n)) => (i, Customer(cust.income/n, cust.spendingScore/n))
-      }.collectAsMap()
-
-      // calculate the total of the distance between the current points (kPoints) and new points (localAverageClosestPoint)
-      tempDist = (0 until K).map(idx => distanceSquared(kPoints(idx), newPoints(idx))).sum
-      println("Distance between iterations: " + tempDist)
-
-      // Copy the new points to the kPoints array for the next iteration
-      for (i <- 0 until K)
-        kPoints(i) = newPoints(i)
-    }*/
 
     val finalCentroids = computeNewCenters(K, Double.PositiveInfinity, convergeDist, kPoints, customersInp)
 

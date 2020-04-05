@@ -27,28 +27,6 @@ object KMeansModel {
     Customer(c1.income + c2.income, c1.spendingScore + c2.spendingScore)
 
   /**
-   * For a random point P, this method returns, index of the cluster center, that's closest to the point
-   *
-   * @param point     Random point
-   * @param kClusters center points as of current iteration
-   * @return index of the cluster center, that is closest to the point
-   */
-  def closestPoint(point: Customer, kClusters: Array[Customer]): Int = {
-    var index = 0
-    var bestIndex = 0
-    var closest = Double.PositiveInfinity
-
-    for (i <- 0 until kClusters.length) {
-      val dist = distanceSquared(point, kClusters(i))
-      if (dist < closest) {
-        closest = dist
-        bestIndex = i
-      }
-    }
-    bestIndex
-  }
-
-  /**
    * Given a random point and k-center points, this method returns a closed center point
    *
    * @param point     random point
