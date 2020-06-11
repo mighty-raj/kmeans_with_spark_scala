@@ -1,0 +1,7 @@
+"C:\Users\raaravap\Google Drive\TGT-BACKED-UP\MTECH-DSE-BITSPILANI\MTech_Sem3\Course_StreamProcessing\Assignment-2\Input\"
+
+firstTopic
+"C:\Users\raaravap\Google Drive\TGT-BACKED-UP\MTECH-DSE-BITSPILANI\MTech_Sem3\Course_StreamProcessing\Assignment-2\CheckPointDir\PublishToTopic\"
+
+
+"C:\Users\raaravap\Google Drive\TGT-BACKED-UP\MTECH-DSE-BITSPILANI\MTech_Sem3\Course_StreamProcessing\Assignment-2\Input" firstTopic "C:\Users\raaravap\Google Drive\TGT-BACKED-UP\MTECH-DSE-BITSPILANI\MTech_Sem3\Course_StreamProcessing\Assignment-2\CheckPointDir\PublishToTopic"
